@@ -17,7 +17,7 @@ Simple Python 3 app using [streamdata.io](https://streamdata.io/).
 > pip install -r requirements.txt
 ```
 
-* Edit ``client.py`` and replace [YOUR_STREAMDATAIO_APP_TOKEN] with your App token
+* Edit ``client.py`` and replace ``[YOUR_STREAMDATAIO_APP_TOKEN]`` with your App token
 
 * Finally, launch the demo:
 
@@ -30,6 +30,6 @@ displayed on your terminal.
 
 you can use the provided demo example API which simulates updating
 stocks prices from a financial market:
-'http://stockmarket.streamdata.io/v2/prices'
+'http://stockmarket.streamdata.io/v2/prices'.
 
 Feel free to test it with any REST/Json API of your choice.
