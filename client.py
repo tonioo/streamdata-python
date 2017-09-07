@@ -30,19 +30,19 @@ def print_table(data):
 
 def run():
     """Launch client."""
-    response = requests.get(URL, stream=True)
-    client = sseclient.SSEClient(response)
-    for event in client.events():
-        if event.event == "data":
-            print("Data event received")
-            data = json.loads(event.data)
-        elif event.event == "patch":
-            print("Patch event received")
-            patch = jsonpatch.JsonPatch.from_string(event.data)
-            patch.apply(data, in_place=True)
-        else:
-            print("Unhandled event received.")
-        print_table(data)
+    with requests.get(URL, stream=True) as response:
+        client = sseclient.SSEClient(response)
+        for event in client.events():
+            if event.event == "data":
+                print("Data event received")
+                data = json.loads(event.data)
+            elif event.event == "patch":
+                print("Patch event received")
+                patch = jsonpatch.JsonPatch.from_string(event.data)
+                patch.apply(data, in_place=True)
+            else:
+                print("Unhandled event received.")
+            print_table(data)
 
 
 if __name__ == "__main__":
