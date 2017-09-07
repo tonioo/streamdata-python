@@ -1,14 +1,14 @@
 # streamdata-python
-Simple Python 3 app using streamdata.io 
+
+Simple Python 3 app using [streamdata.io](https://streamdata.io/).
 
 ## Step by step setup
 
-Create a free account on streamdata.io
-https://portal.streamdata.io/#/register to get an App token.
+* Create a free account on streamdata.io https://portal.streamdata.io/#/register to get an App token
 
-Clone this repository.
+* Clone this repository
 
-Create a virtualenv and install requirements:
+* Create a virtualenv and install requirements:
 
 ```bash
 > cd streamdataio-python
@@ -17,9 +17,9 @@ Create a virtualenv and install requirements:
 > pip install -r requirements.txt
 ```
 
-Edit ``client.py`` and replace [YOUR_STREAMDATAIO_APP_TOKEN] with your App token.
+* Edit ``client.py`` and replace [YOUR_STREAMDATAIO_APP_TOKEN] with your App token
 
-And finally, launch the demo:
+* Finally, launch the demo:
 
 ```python
 > python client.py
