@@ -36,14 +36,18 @@ def run():
             if event.event == "data":
                 print("Data event received")
                 data = json.loads(event.data)
+                print_table(data)
             elif event.event == "patch":
                 print("Patch event received")
                 patch = jsonpatch.JsonPatch.from_string(event.data)
                 patch.apply(data, in_place=True)
+                print_table(data)
+            elif event.event == "error":
+                print("Error: {}".format(event.data))
+                response.close()
             else:
                 print("Unhandled event received.")
-            print_table(data)
-
+                response.close()
 
 if __name__ == "__main__":
     run()

@@ -13,7 +13,7 @@ Simple Python 3 app using [streamdata.io](https://streamdata.io/).
 ```bash
 > cd streamdataio-python
 > python3 -m venv streamdataio_env
-> source streamdataio_env
+> source streamdataio_env/bin/activate
 > pip install -r requirements.txt
 ```
 
